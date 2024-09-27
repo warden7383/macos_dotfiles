@@ -1,3 +1,9 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/warden7383/nvim
+[submodule "wezterm"]
+	path = wezterm
+	url = https://github.com/warden7383/wezterm
+[submodule "sketchybar"]
+	path = sketchybar
+	url = https://github.com/warden7383/sketchyBar
