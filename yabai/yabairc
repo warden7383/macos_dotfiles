@@ -94,3 +94,5 @@ yabai -m config debug_output on
 # add 20 padding to the top and bottom of all spaces regardless of the display it belongs to
 #yabai -m config external_bar all:20:20
 yabai -m rule --add app="^VirtualBox VM$" manage=off
+# yabai -m rule --add --one-shot app="^Discord$" space=2
+yabai -m rule --add app="^Discord$" space=2
