@@ -61,6 +61,29 @@ adjust-underline-thickness = 1
 adjust-cursor-height = 5%
 adjust-cursor-thickness = 10%
 
+title = " "
 shell-integration = zsh
 # vi mode is conflicting with shell-integration features
 shell-integration-features=cursor,no-title,sudo
+
+macos-titlebar-style = hidden
+# window-new-tab-position = end
+# prevents unicode from holding down the 'option' key
+macos-option-as-alt = true 
+# -----------------------------------------------
+# |                 keybinds                    |
+# -----------------------------------------------
+keybind = alt+;>n=new_window 
+keybind = alt+;>v=new_split:right
+keybind = alt+;>h=new_split:down
+keybind = alt+;>q=close_window 
+keybind = alt+shift+b=previous_tab 
+keybind = alt+shift+n=next_tab 
+keybind = ctrl+shift+t=new_tab 
+keybind = alt+;>p=toggle_quick_terminal
+
+
+
+# -----------------------------------------------
+# |                                             |
+# -----------------------------------------------
