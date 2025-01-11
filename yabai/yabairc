@@ -1,7 +1,15 @@
-# IF on apple sillicon mac and running yabai gives the following error: yabai missing required nvram boot-arg '-arm64e_preview_abi' (this error prevents any features that requires SIP partially disabled such as spaces or shadows despite having SIP disabled/partially)
+# NOTE: IF on apple sillicon mac and running yabai gives the following error: yabai 
+# missing required nvram boot-arg '-arm64e_preview_abi' (this error prevents 
+# any features that requires SIP partially disabled such as spaces or shadows 
+# despite having SIP disabled/partially)
+#
 # Type the following command below and restart your mac:
 # sudo nvram boot-args=-arm64e_preview_abi 
 # (can check by running `sudo nvram -p` and finding the nvram boot-args inside)
+#
+# NOTE: if updating yabai via curl github script or homebrew, follow the 
+# instructions here (to make scripting-addition work on startup): 
+# https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
 
 # for this to work you must configure sudo such that
 # it will be able to run the command without password
