@@ -70,6 +70,7 @@ macos-titlebar-style = hidden
 # window-new-tab-position = end
 # prevents unicode from holding down the 'option' key
 macos-option-as-alt = true 
+
 # -----------------------------------------------
 # |                 keybinds                    |
 # -----------------------------------------------
@@ -81,8 +82,6 @@ keybind = alt+shift+b=previous_tab
 keybind = alt+shift+n=next_tab 
 keybind = ctrl+shift+t=new_tab 
 keybind = alt+;>p=toggle_quick_terminal
-
-
 
 # -----------------------------------------------
 # |                                             |
