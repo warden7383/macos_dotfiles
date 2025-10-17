@@ -40,7 +40,7 @@
 # #141524 #16161e
 background = #141524
 # foreground = ffffff
-theme = tokyonight-storm
+theme = "tokyonight storm"
 selection-foreground = #cad3f5
 selection-background = #363a4f
 background-opacity = 0.85
@@ -49,7 +49,8 @@ cursor-color = #c6a0f6
 cursor-style = block
 cursor-style-blink = false
 
-font-family = "JetBrainsMonoNL Nerd Font Mono"
+# font-family = "Monolisa"
+font-family = "JetBrainsMonoNL Nerd Font"
 font-synthetic-style = false
 font-size = 13
 font-thicken = true
