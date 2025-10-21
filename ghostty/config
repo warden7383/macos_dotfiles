@@ -43,13 +43,16 @@ background = #141524
 theme = "tokyonight storm"
 selection-foreground = #cad3f5
 selection-background = #363a4f
-background-opacity = 0.85
-
+background-opacity = 1.0
+background-image = "background/ch19test.png"
+background-image-position = center-right
+background-image-opacity = 0.13
+background-image-fit = contain
+split-divider-color = #8aadf4
 cursor-color = #c6a0f6
 cursor-style = block
 cursor-style-blink = false
 
-# font-family = "Monolisa"
 font-family = "JetBrainsMonoNL Nerd Font"
 font-synthetic-style = false
 font-size = 13
