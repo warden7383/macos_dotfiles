@@ -46,7 +46,7 @@ selection-background = #363a4f
 background-opacity = 1.0
 background-image = "background/ch19test.png"
 background-image-position = center-right
-background-image-opacity = 0.13
+background-image-opacity = 0.15
 background-image-fit = contain
 split-divider-color = #8aadf4
 cursor-color = #c6a0f6
@@ -78,6 +78,10 @@ macos-option-as-alt = true
 # -----------------------------------------------
 # |                 keybinds                    |
 # -----------------------------------------------
+
+# clears all default keybinds before declaring my own
+keybind=clear
+
 keybind = alt+;>n=new_window 
 keybind = alt+;>v=new_split:right
 keybind = alt+;>h=new_split:down
@@ -86,6 +90,36 @@ keybind = alt+shift+b=previous_tab
 keybind = alt+shift+n=next_tab 
 keybind = ctrl+shift+t=new_tab 
 keybind = alt+;>p=toggle_quick_terminal
+
+# closes a pane
+keybind = alt+shift+p=close_surface 
+
+# SPLITS
+keybind = performable:ctrl+shift+h=goto_split:left
+keybind = performable:ctrl+shift+j=goto_split:down
+keybind = performable:ctrl+shift+k=goto_split:up
+keybind = performable:ctrl+shift+l=goto_split:right
+keybind = performable:ctrl+shift+arrow_left=resize_split:left,10
+keybind = performable:ctrl+shift+arrow_down=resize_split:down,10
+keybind = performable:ctrl+shift+arrow_up=resize_split:up,10
+keybind = performable:ctrl+shift+arrow_right=resize_split:right,10
+keybind = performable:ctrl+shift+equal=equalize_splits
+
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = performable:ctrl+v=paste_from_clipboard
+
+keybind = performable:ctrl+shift+d=scroll_page_fractional:0.5
+keybind = performable:ctrl+shift+u=scroll_page_fractional:-0.5
+keybind = shift+arrow_up=adjust_selection:up
+keybind = shift+arrow_down=adjust_selection:down
+keybind = shift+arrow_left=adjust_selection:left
+keybind = shift+arrow_right=adjust_selection:right
+
+# these 2 keybinds below jump upwards to the last prompt's STDOUT and downwards
+keybind = alt+arrow_up=jump_to_prompt:-1
+keybind = alt+arrow_down=jump_to_prompt:1
+# uncomment this to work on ghostty config
+keybind = ctrl+shift+r=reload_config
 
 # -----------------------------------------------
 # |                                             |
