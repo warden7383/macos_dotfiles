@@ -107,6 +107,8 @@ keybind = performable:ctrl+shift+equal=equalize_splits
 
 keybind = performable:ctrl+c=copy_to_clipboard
 keybind = performable:ctrl+v=paste_from_clipboard
+keybind = alt+;>u=undo
+keybind = alt+;>r=redo
 
 keybind = performable:ctrl+shift+d=scroll_page_fractional:0.5
 keybind = performable:ctrl+shift+u=scroll_page_fractional:-0.5
@@ -114,6 +116,8 @@ keybind = shift+arrow_up=adjust_selection:up
 keybind = shift+arrow_down=adjust_selection:down
 keybind = shift+arrow_left=adjust_selection:left
 keybind = shift+arrow_right=adjust_selection:right
+
+keybind = ctrl+shift+c=toggle_command_palette
 
 # these 2 keybinds below jump upwards to the last prompt's STDOUT and downwards
 keybind = alt+arrow_up=jump_to_prompt:-1
