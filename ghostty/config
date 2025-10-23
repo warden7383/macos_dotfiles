@@ -65,6 +65,9 @@ adjust-underline-thickness = 1
 adjust-cursor-height = 5%
 adjust-cursor-thickness = 10%
 
+quick-terminal-position = bottom
+quick-terminal-size = 15%,80%
+
 title = " "
 shell-integration = zsh
 # vi mode is conflicting with shell-integration features
