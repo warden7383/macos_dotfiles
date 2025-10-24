@@ -48,6 +48,7 @@ background-image = "background/ch19test.png"
 background-image-position = center-right
 background-image-opacity = 0.15
 background-image-fit = contain
+unfocused-split-opacity = 0.85
 split-divider-color = #8aadf4
 cursor-color = #c6a0f6
 cursor-style = block
