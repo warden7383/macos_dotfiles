@@ -132,3 +132,18 @@ keybind = ctrl+shift+r=reload_config
 # -----------------------------------------------
 # |                                             |
 # -----------------------------------------------
+
+
+
+# # -------------------------------------------------------
+# # |                 Keybinds for Tmux                    |
+# # -------------------------------------------------------
+# # NOTE: comment out the keybinds above if permenantly using tmux and uncomment
+# # these (otherwise do the vice versa):
+#
+# # clears all the keymaps that may have been set above to use tmux-designed
+# # keymaps
+# keybind = clear 
+# # -------------------------------------------------------
+# # |                                                     |
+# # -------------------------------------------------------
