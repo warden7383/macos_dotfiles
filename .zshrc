@@ -1,11 +1,16 @@
-[[ -r ~/Repos/znap/znap.zsh ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/Repos/znap
-source ~/Repos/znap/znap.zsh  # Start Znap
+osName=$(uname)
 
+[[ -r ~/zshPlugins/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/zshPlugins/znap
+source ~/zshPlugins/znap/znap.zsh  # Start Znap
+
+if [[ "$osName" == "Linux" ]]; then
+
+
+elif [[ "$osName" == Darwin ]]; then
 AUTOPAIR_INHIBIT_INIT=1
 source $(brew --prefix)/share/zsh-autopair/autopair.zsh
-
 # zsh-vi-mode: (via brew)
 # Change to Zsh's default readkey engine
 ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
@@ -90,3 +95,7 @@ function cdy() {
 
 
 export PATH
+
+else
+echo "Running on unknown OS\n"
+fi
