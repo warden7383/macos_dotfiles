@@ -93,6 +93,9 @@ function cdy() {
 
 export PATH
 
+if [[ -z "$TMUX" ]]; then
+tmux
+fi
 elif [[ "$osName" == Darwin ]]; then
 AUTOPAIR_INHIBIT_INIT=1
 source $(brew --prefix)/share/zsh-autopair/autopair.zsh
