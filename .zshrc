@@ -91,6 +91,22 @@ function cdy() {
 	rm -f -- "$tmp"
 }
 
+batStatus=$(bat -h)
+if [[ ! -d ~/.config/bat && $batStatus ]]; then
+mkdir -p "$(bat --config-dir)/themes"
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+bat cache --build
+touch "$(bat --config-dir)/config"
+fi
+
+batdiff() {
+    git diff --name-only --relative --diff-filter=d -z | xargs -0 bat --diff
+}
+
+export MANPAGER="bat -plman"
 export PATH
 
 if [[ -z "$TMUX" ]]; then
