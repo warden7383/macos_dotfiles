@@ -91,6 +91,7 @@ function cdy() {
 	rm -f -- "$tmp"
 }
 
+# TODO: Move the bat condition block into an install.sh script
 batStatus=$(bat -h)
 if [[ ! -d ~/.config/bat && $batStatus ]]; then
 mkdir -p "$(bat --config-dir)/themes"
