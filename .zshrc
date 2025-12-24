@@ -107,6 +107,8 @@ batdiff() {
     git diff --name-only --relative --diff-filter=d -z | xargs -0 bat --diff
 }
 
+PATH="/opt/nvim-linux-x86_64/bin:$PATH"
+
 export MANPAGER="bat -plman"
 export PATH
 
