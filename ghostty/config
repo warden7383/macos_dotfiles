@@ -40,7 +40,7 @@
 # #141524 #16161e
 background = #141524
 # foreground = ffffff
-theme = "tokyonight storm"
+theme = "TokyoNight Storm"
 selection-foreground = #cad3f5
 selection-background = #363a4f
 background-opacity = 1.0
@@ -79,6 +79,7 @@ macos-titlebar-style = hidden
 # prevents unicode from holding down the 'option' key
 macos-option-as-alt = true 
 
+# window-decoration = none
 # -----------------------------------------------
 # |                 keybinds                    |
 # -----------------------------------------------
@@ -144,6 +145,18 @@ keybind = ctrl+shift+r=reload_config
 # # clears all the keymaps that may have been set above to use tmux-designed
 # # keymaps
 keybind = clear 
+# # -------------------------------------------------------
+# # |                                                     |
+# # -------------------------------------------------------
+
+# # -------------------------------------------------------
+# # |                 Keybinds for Linux                   |
+# # -------------------------------------------------------
+
+# Mappings for linux (fedora, since fedora doesn't allow for ctrl-v paste clipboard and window decorations
+keybind = ctrl+v=paste_from_clipboard
+keybind = ctrl+alt+shift+d=toggle_window_decorations
+
 # # -------------------------------------------------------
 # # |                                                     |
 # # -------------------------------------------------------
