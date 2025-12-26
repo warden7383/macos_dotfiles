@@ -46,6 +46,7 @@ selection-background = #363a4f
 background-opacity = 1.0
 background-image = "background/ch19test.png"
 background-image-position = center-right
+# background-image-opacity = 0.03 for linux on PC
 background-image-opacity = 0.15
 background-image-fit = contain
 unfocused-split-opacity = 0.85
@@ -79,7 +80,9 @@ macos-titlebar-style = hidden
 # prevents unicode from holding down the 'option' key
 macos-option-as-alt = true 
 
-# window-decoration = none
+gtk-titlebar = true
+# gtk-titlebar-hide-when-maximized = true
+
 # -----------------------------------------------
 # |                 keybinds                    |
 # -----------------------------------------------
