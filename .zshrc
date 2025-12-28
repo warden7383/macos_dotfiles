@@ -115,6 +115,14 @@ export PATH
 if [[ -z "$TMUX" ]]; then
 tmux
 fi
+
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
+
 elif [[ "$osName" == Darwin ]]; then
 AUTOPAIR_INHIBIT_INIT=1
 source $(brew --prefix)/share/zsh-autopair/autopair.zsh
