@@ -28,6 +28,7 @@ pkgsDnf="
   rust 
   cargo 
   golang 
+  hyprland
 "
 pkgsSnap="
   spotify 
@@ -53,8 +54,12 @@ else
     sudo dnf copr enable atim/starship -y | sudo tee -a output.txt
     echo "> Ghostty COPR:" >> output.txt
     sudo dnf copr enable scottames/ghostty -y | sudo tee -a output.txt
+    echo "> Hyprland COPR (solopasha/hyperland)" >> output.txt
+    sudo dnf copr enable solopasha/hyprland  -y | sudo tee -a output.txt
+
     echo "INFO: Installing flatpak" >> output.txt
     sudo dnf install flatpak -y | sudo tee -a output.txt
+
     echo "INFO: Installing dnf packages" >> output.txt
     sudo dnf install $pkgsDnf -y | sudo tee -a output.txt
     echo "INFO: Installing flat packages" >> output.txt
