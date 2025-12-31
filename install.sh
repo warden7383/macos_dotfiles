@@ -29,6 +29,9 @@ pkgsDnf="
   cargo 
   golang 
   hyprland
+  dunst
+  waybar
+  rofi
 "
 pkgsSnap="
   spotify 
