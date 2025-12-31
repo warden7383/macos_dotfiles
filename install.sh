@@ -7,6 +7,7 @@ osName=$(uname -s)
 
 pkgsFlat="
   app.zen_browser.zen
+  om.discordapp.Discord
 "
 pkgsDnf="
   ghostty 
@@ -74,7 +75,7 @@ else
     sudo dnf install $pkgsDnf -y 2>&1 | sudo tee -a output.txt
 
     echo "INFO: Installing flat packages" >> output.txt
-    sudo flat install $pkgsFlat 2>&1 | sudo tee -a output.txt
+    sudo flatpak install $pkgsFlat -Y 2>&1 | sudo tee -a output.txt
 
     echo "INFO: Installing snap packages" >> output.txt
     sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt
