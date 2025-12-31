@@ -35,6 +35,8 @@ pkgsSnap="
   discord 
 "
 
+pkgsCopr=("atim/starship" "scottames/ghostty" "solopasha/hyprland" "dejan/lazygit" "phracek/PyCharm")
+
 echo -e "[Dotfile Installer]:"
 echo -e "[OS] $osName detected"
 echo -e "\n"
@@ -47,25 +49,24 @@ else
     touch output.txt
     echo "INFO: Created output file" >> output.txt
     echo "INFO: Updating existing packages:" >> output.txt
-    sudo dnf upgrade -y | sudo tee -a output.txt
+    sudo dnf upgrade -y 2>&1 | sudo tee -a output.txt
     echo -e "INFO: Install script detected [LINUX] OS. Installing Dotfiles:\n" >> output.txt
+
     echo -e "INFO: Enabling COPR Repos\n" >> output.txt
-    echo "> Starship COPR:" >> output.txt
-    sudo dnf copr enable atim/starship -y | sudo tee -a output.txt
-    echo "> Ghostty COPR:" >> output.txt
-    sudo dnf copr enable scottames/ghostty -y | sudo tee -a output.txt
-    echo "> Hyprland COPR (solopasha/hyperland)" >> output.txt
-    sudo dnf copr enable solopasha/hyprland  -y | sudo tee -a output.txt
+    for repo in "${pkgsCopr[@]}"; do
+      echo "> Enabling COPR Repo: $repo" >> output.txt
+      sudo dnf copr enable "$repo" -y 2>&1 | sudo tee -a output.txt
+    done
 
     echo "INFO: Installing flatpak" >> output.txt
-    sudo dnf install flatpak -y | sudo tee -a output.txt
+    sudo dnf install flatpak -y 2>&1 | sudo tee -a output.txt
 
     echo "INFO: Installing dnf packages" >> output.txt
-    sudo dnf install $pkgsDnf -y | sudo tee -a output.txt
+    sudo dnf install $pkgsDnf -y 2>&1 | sudo tee -a output.txt
     echo "INFO: Installing flat packages" >> output.txt
-    sudo flat install $pkgsFlat | sudo tee -a output.txt
+    sudo flat install $pkgsFlat 2>&1 | sudo tee -a output.txt
     echo "INFO: Installing snap packages" >> output.txt
-    sudo snap install $pkgsSnap -y | sudo tee -a output.txt
+    sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt
     echo -e "\nDone installing packages." >> output.txt
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
