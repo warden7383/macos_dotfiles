@@ -42,8 +42,14 @@ echo -e "[OS] $osName detected"
 echo -e "\n"
 
 if [[ $1 == "list" ]]; then
-  echo "Packages:"
-
+  echo -e "Packages:\n"
+  echo "Flatpak Packages: $pkgsFlat"
+  echo "DNF Fedora Packages: $pkgsDnf"
+  echo "Snap Packages: $pkgsSnap"
+  echo "COPR Fedora Packages: "
+  for repo in "${pkgsCopr[@]}"; do
+    echo "$repo"
+  done
 else
   if [[ "$osName" == "Linux" ]]; then
     touch output.txt
@@ -63,10 +69,13 @@ else
 
     echo "INFO: Installing dnf packages" >> output.txt
     sudo dnf install $pkgsDnf -y 2>&1 | sudo tee -a output.txt
+
     echo "INFO: Installing flat packages" >> output.txt
     sudo flat install $pkgsFlat 2>&1 | sudo tee -a output.txt
+
     echo "INFO: Installing snap packages" >> output.txt
     sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt
+
     echo -e "\nDone installing packages." >> output.txt
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
