@@ -1,4 +1,5 @@
 #!/bin/bash
+# NOTE: Move the entire dotfilies repo into your ~/.config dir before using this script
 osName=$(uname -s)
 # pkgsFlat=("app.zen_browser.zen")
 # pkgsDnf=("ghostty" "tmux" "starship" "bat" "zoxide" "fzf" "btop" "rg" "zsh" "fd" "lsd" "lazygit" "clang" "nodejs" "cmake" "make" "rust" "cargo" "golang")
@@ -81,6 +82,10 @@ else
     sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt
 
     echo -e "\nDone installing packages." >> output.txt
+
+    echo "Adding execution perms to hyprland's gamemode script" >> output.txt
+    chmod +x ~/.config/hypr/gamemode.sh 
+
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
     echo -e "INFO: Install script detected [MACOS] OS. Installing Dotfiles:\n"
