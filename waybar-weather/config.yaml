@@ -1,0 +1,38 @@
+# DOCS: https://crates.io/crates/waybar-weather
+
+# TODO: get api key from here (will take approx 30mins for the module to be active): 
+# https://home.openweathermap.org/api_keys
+apikey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+cityid: "Vancouver, CA" # Example: "New York, US" or "Tokyo, JP"
+units: Metric        # Metric, Imperial, or Standard
+high_temp: 30        # Using the same units as above
+low_temp: -10
+
+output_format: json  # text or json
+
+# Output templates
+# Available variables:
+#   icon            an icon representing the current weather condition
+#   city            "London", "New York", "Tokyo"
+#   country         "GB", "US", "JP"
+#   main            "Clear", "Clouds", "Rain"
+#   description     "clear sky", "few clouds", "light rain"
+#   temp
+#   feels_like
+#   temp_min
+#   temp_max
+#   symbol          "°C", "°F", "K" based on units
+#   humidity
+#   pressure
+#   wind_speed
+#   wind_direction
+#   wind_unit
+#   sunrise
+#   sunset
+#
+text: "{icon} {temp}{symbol}"
+# :w
+# text: "{icon} {temp}{symbol} 󰖝 {wind_speed}"
+# text: "{icon} {temp}{symbol} 󰖝 {wind_speed}"
+# text: "{city}: {main} {temp}{symbol}"
+tooltip: "{city}, {country}\n{main} ({description})\nFeels like: {feels_like}{symbol}\nHumidity: {humidity}%\nPressure: {pressure} hPa\nWind: {wind_speed} {wind_unit} ({wind_direction})\n\n {sunrise}  {sunset}"
