@@ -23,6 +23,7 @@
         "memory",
         "temperature",
         "custom/weather",
+        "custom/gpu-usage",
         "backlight",
         "sway/language",
         "battery",
@@ -137,6 +138,14 @@
         "format": " {}%",
         "tooltip": true,
         "tooltip-format": "{used:0.1f}GiB/{total:0.1f}GiB used"
+    },
+    "custom/gpu-usage": {
+      "format": "{icon}{text}", /* "{text} {icon}" for nightly users */
+      "exec": "gpu-usage-waybar",
+      "return-type": "json",
+      "format-icons": "󰾲 ",
+      // "on-click": "ghostty -e nvtop"
+      "on-click": ""
     },
     // "temperature": {
     //     // "thermal-zone": 2,
