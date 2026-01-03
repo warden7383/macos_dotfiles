@@ -46,6 +46,10 @@
             "urgent": "",
             "focused": "",
             "default": ""
+        },
+        "persistent-workspaces": {
+          // no idea if this works yet (unable to test?)
+          "DP-1": [ 10 ]
         }
     },
     "keyboard-state": {
@@ -110,7 +114,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%I:%M %p}",
+        "tooltip": true,
+        "tooltip-format": "<big>{:%I:%M %p}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
