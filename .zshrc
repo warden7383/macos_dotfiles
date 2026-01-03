@@ -108,6 +108,7 @@ batdiff() {
 }
 
 PATH="/opt/nvim-linux-x86_64/bin:$PATH"
+PATH="/home/warden/.cargo/bin:$PATH"
 
 export MANPAGER="bat -plman"
 export PATH
