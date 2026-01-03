@@ -28,7 +28,7 @@
 
 * {
     font-family: 'JetBrainsMonoNL Nerd Font', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 window#waybar {
@@ -149,7 +149,7 @@ button:hover {
     color: @mauve;
     padding: 2px 6px;
     margin: 5px 5px;
-    font-size: 17px;
+    /* font-size: 17px; */
     border-style: solid;
     border-radius: 7px;
     /* border-color: @mauve; */

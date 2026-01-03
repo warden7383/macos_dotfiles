@@ -114,14 +114,17 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        // "format": "<span size='13000'> </span>{:%I:%M %p}",
         "format": " {:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "<big>{:%I:%M %p}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": " {usage}%",
+        "tooltip": true,
+        "tooltip-format": "{avg_frequency} GHZ"
+
     },
     "memory": {
         "format": "{}% "
