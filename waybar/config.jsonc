@@ -127,7 +127,9 @@
 
     },
     "memory": {
-        "format": "{}% "
+        "format": " {}%",
+        "tooltip": true,
+        "tooltip-format": "{used:0.1f}GiB/{total:0.1f}GiB used"
     },
     "temperature": {
         // "thermal-zone": 2,
