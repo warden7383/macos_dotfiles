@@ -7,6 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/textBow",
         "hyprland/workspaces",
         "hyprland/submap",
         "sway/scratchpad"
@@ -26,7 +27,7 @@
         "custom/gpu-usage",
         "custom/date",
         "backlight",
-        "sway/language",
+        "hyprland/language",
         "battery",
         "clock",
         "tray"
@@ -35,24 +36,25 @@
     "hyprland/window": {
       "separate-ouputs": true
     },
+    "custom/textBow": {
+      // "format": "<span size='16150'>󱡁 </span>"
+      "format": "<span size='15360'>󱡁 </span>"
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
+        "all-outputs": false,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        // "format": "{name}: {icon}",
+        "format": "{icon}",
+        "sort-by": "default",
+        // "move-to-monitor": true,
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        },
-        "persistent-workspaces": {
-          // no idea if this works yet (unable to test?)
-          "DP-1": [ 10 ]
+            "urgent": "<span size='15360'> </span>",
+            "focused": " ",
+            // "default": "<span size='15360'> </span>", // 󰺕 
+            "default": "<span size='14000'> </span>", // 󰺕 
+            // "active": "<span size='16150'>󰣉 </span>"
+            "active": "<span size='15360'>󰣉 </span>"
         }
     },
     "keyboard-state": {
