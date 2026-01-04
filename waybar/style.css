@@ -272,12 +272,20 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: rgba(184, 192, 224, 0.15);
+    color: @subtext1;
+    padding: 0px 6px;
+    margin: 5px 5px;
+    font-size: 17px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: rgba(184, 192, 224, 0.6);
+    border-width: 2px;
 }
 
-#network.disconnected {
-    background-color: #f53c3c;
-}
+/* #network.disconnected { */
+/*     background-color: #f53c3c; */
+/* } */
 
 #pulseaudio {
     background-color: #f1c40f;

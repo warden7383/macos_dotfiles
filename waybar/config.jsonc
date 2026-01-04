@@ -198,12 +198,19 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+        // "format-ethernet": "{ipaddr}/{cidr} ",
+        // "tooltip-format": "{ifname} via {gwaddr} ",
+        // "format-linked": "{ifname} (No IP) ",
+        // "format-disconnected": "Disconnected ⚠",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": " ",
+        "format-ethernet": "󰈁",
+        "tooltip": true,
+        "tooltip-format": "Network Stats:\n\nNetwork Interface: {ifname}\nDefault Gateway: {gwaddr}\nIP Address(first): {ipaddr}\nIPv4 Subnetmask: {netmask}\nIPv6 Subnetmask: {netmask6}\nWireless Network SSID: {essid}\nSignal Strength: {signalStrength} or {signaldBm}dBm\nWiFi Frequency: {frequency}\nUp Speed: {bandwidthUpBytes}\nDown Speed: {bandwidthDownBytes}\nTotal Speed: {bandwidthTotalBytes}\n",
+        "tooltip-format-wifi": "Network Stats(Wireless):\n\nNetwork Interface: {ifname}\nDefault Gateway: {gwaddr}\nIP Address(first): {ipaddr}\nIPv4 Subnetmask: {netmask}\nIPv6 Subnetmask: {netmask6}\nWireless Network SSID: {essid}\nSignal Strength: {signalStrength} or {signaldBm}dBm\nWiFi Frequency: {frequency}\nUp Speed: {bandwidthUpBytes}\nDown Speed: {bandwidthDownBytes}\nTotal Speed: {bandwidthTotalBytes}\n",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": " "
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
