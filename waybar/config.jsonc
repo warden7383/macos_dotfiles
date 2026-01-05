@@ -23,7 +23,7 @@
         "cpu",
         "memory",
         "temperature",
-        "mpd",
+        "mpris",
         "custom/weather",
         "custom/gpu-usage",
         "custom/date",
@@ -238,6 +238,28 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+
+    "mpris": {
+      "format": "{status_icon} {dynamic} {status_icon}",
+      "format-paused": "{status_icon} {dynamic} {status_icon}",
+      "artist-len": 8,
+      "title-len": 12,
+      "player-icons": {
+        "default": "󰎈", // 󰎈  󰎊
+        "mpv": "🎵"
+      },
+      "dynamic-separator": "  ",
+      // "dynamic-order": ["artist", "title", "position", "length"],
+      "dynamic-order": ["artist", "title"],
+      // "dynamic-len": 40,
+      // "dynamic-importance-order": ["artist", "title", "position", "length"],
+      "dynamic-importance-order": ["artist", "title"],
+      "status-icons": {
+        "playing": "<span size='14000'>󰎈</span>",
+        "paused": "<span size='14000'>󰎊</span>"
+      },
+  // "ignored-players": ["firefox"]
     },
     "custom/media": {
         "format": "{icon} {text}",
