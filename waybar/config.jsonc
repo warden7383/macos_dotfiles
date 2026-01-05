@@ -30,7 +30,8 @@
         "hyprland/language",
         "battery",
         "clock",
-        "tray"
+        "tray",
+        "custom/power"
     ],
     // Modules configuration
     "hyprland/window": {
@@ -152,9 +153,8 @@
       "format": "{icon}{text}", /* "{text} {icon}" for nightly users */
       "exec": "~/.cargo/bin/gpu-usage-waybar",
       "return-type": "json",
-      "format-icons": "󰾲 ",
+      "format-icons": "󰾲 "
       // "on-click": "ghostty -e nvtop"
-      "on-click": ""
     },
     // "temperature": {
     //     // "thermal-zone": 2,
@@ -238,23 +238,24 @@
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
+            // these icons won't be displayed as "format": "{window}..." is disabled
             "spotify": "",
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/waybar/customModules/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+      "format" : "⏻ ",
+      "tooltip": false,
+      "menu": "on-click",
+      "menu-file": "$HOME/.config/waybar/customModules/power_menu.xml", // Menu file in resources folder
+      "menu-actions": {
+        "shutdown": "shutdown",
+        "reboot": "reboot",
+        "suspend": "systemctl suspend",
+        "hibernate": "systemctl hibernate"
+      }
     }
 }
