@@ -23,6 +23,7 @@
         "cpu",
         "memory",
         "temperature",
+        "mpd",
         "custom/weather",
         "custom/gpu-usage",
         "custom/date",
@@ -118,6 +119,10 @@
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
+        // if the user icon directory does not exist, make it.
+        "icons": {
+          "Spotify": "$HOME/.local/share/icons/hicolor/16x16/apps/spotify-linux-32.png"
+        }
     },
     "clock": {
         // "timezone": "America/New_York",
