@@ -147,6 +147,7 @@ source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 #alias tetris=tetriscurses
 
 PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 PATH="/Users/warden/tools/llvm-project/build/bin:$PATH" #llvm and clang
 # PATH="$PATH:/Applications/nvim-macos/bin" #version 0.9
@@ -208,7 +209,6 @@ function cdy() {
 	fi
 	rm -f -- "$tmp"
 }
-
 
 export PATH
 

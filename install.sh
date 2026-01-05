@@ -88,7 +88,10 @@ else
 
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
-    echo -e "INFO: Install script detected [MACOS] OS. Installing Dotfiles:\n"
+    echo -e "INFO: Install script detected [MACOS] OS. Installing Dotfiles:\n" >> output.txt
+    brew upgrade
+    pkgsBrew=("openjdk") # move to the top of the file
+
   else
     echo "Unknown OS detected, dotfilies will not be installed."
   fi
