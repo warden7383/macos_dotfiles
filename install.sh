@@ -34,13 +34,26 @@ pkgsDnf="
   dunst
   waybar
   rofi
+  blueman
+  python3-pip
+  nvtop
+  pavucontrol
 "
+
 pkgsSnap="
   spotify 
   discord 
 "
 
 pkgsCopr=("atim/starship" "scottames/ghostty" "solopasha/hyprland" "dejan/lazygit" "phracek/PyCharm")
+
+pkgsCargo="waybar-weather gpu-usage-waybar"
+
+pkgsPip="PyGObject"
+
+pkgsBrew=("openjdk") # move to the top of the file
+
+fileApiKeys=("~/.config/waybar-weather/config.yaml")
 
 echo -e "[Dotfile Installer]:"
 echo -e "[OS] $osName detected"
@@ -57,6 +70,7 @@ if [[ $1 == "list" ]]; then
   done
 else
   if [[ "$osName" == "Linux" ]]; then
+    mkdir -p "$HOME"/.local/share/icons/hicolor/16x16/apps/ >> output.txt
     touch output.txt
     echo "INFO: Created output file" >> output.txt
     echo "INFO: Updating existing packages:" >> output.txt
@@ -81,17 +95,23 @@ else
     echo "INFO: Installing snap packages" >> output.txt
     sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt
 
+    echo "INFO: Installing cargo packages" >> output.txt
+    cargo install $pkgsCargo 2>&1 | sudo tee -a output.txt
+
     echo -e "\nDone installing packages." >> output.txt
 
     echo "Adding execution perms to hyprland's gamemode script" >> output.txt
     chmod +x ~/.config/hypr/gamemode.sh 
 
+    echo -e "TODO: Please manually add the api-keys necessary to the following scripts\n" >> output.txt
+    for key in "${fileApiKeys[@]}"; do
+      echo ">FILE: $key" >> output.txt
+    done
+
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
     echo -e "INFO: Install script detected [MACOS] OS. Installing Dotfiles:\n" >> output.txt
     brew upgrade
-    pkgsBrew=("openjdk") # move to the top of the file
-
   else
     echo "Unknown OS detected, dotfilies will not be installed."
   fi
