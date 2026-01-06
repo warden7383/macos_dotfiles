@@ -177,6 +177,11 @@ button:hover {
     border-width: 2px;
 }
 
+#clock:hover {
+  background-color: rgba(198, 160, 246, 0.75);
+  color: @crust
+}
+
 #battery {
     background-color: #ffffff;
     color: #000000;
@@ -239,6 +244,11 @@ label:focus {
     border-width: 2px;
 }
 
+#cpu:hover {
+  background-color: rgba(125, 196, 228, 0.75);
+  color: @crust
+}
+
 #memory {
     background-color: rgba(166, 218, 149, 0.15);
     color: @green;
@@ -248,6 +258,11 @@ label:focus {
     border-radius: 7px;
     border-color: rgba(166, 218, 149, 0.6);
     border-width: 2px;
+}
+
+#memory:hover {
+  background-color: rgba(166, 218, 149, 0.75);
+  color: @crust
 }
 
 #custom-weather {
@@ -261,6 +276,11 @@ label:focus {
     border-width: 2px;
 }
 
+#custom-weather:hover {
+  background-color: rgba(244, 219, 214, 0.75);
+  color: @crust
+}
+
 #custom-gpu-usage {
     background-color: rgba(183, 189, 248, 0.15);
     color: @lavender;
@@ -270,6 +290,11 @@ label:focus {
     border-radius: 7px;
     border-color: rgba(183, 189, 248, 0.6);
     border-width: 2px;
+}
+
+#custom-gpu-usage:hover {
+  background-color: rgba(183, 189, 248, 0.75);
+  color: @crust
 }
 
 #custom-date {
@@ -283,6 +308,11 @@ label:focus {
     border-width: 2px;
 }
 
+#custom-date:hover {
+  background-color: rgba(245, 169, 127, 0.75);
+  color: @crust
+}
+
 #custom-power {
     background-color: rgba(237, 135, 150, 0.15);
     color: @red;
@@ -292,6 +322,11 @@ label:focus {
     border-radius: 7px;
     border-color: rgba(237, 135, 150, 0.6);
     border-width: 2px;
+}
+
+#custom-power:hover {
+  background-color: rgba(237, 135, 150, 0.75);
+  color: @crust
 }
 
 #disk {
@@ -312,6 +347,11 @@ label:focus {
     border-radius: 7px;
     border-color: rgba(184, 192, 224, 0.6);
     border-width: 2px;
+}
+
+#network:hover {
+  background-color: rgba(184, 192, 224, 0.75);
+  color: @crust
 }
 
 /* #network.disconnected { */
@@ -344,14 +384,19 @@ label:focus {
 }
 
 #mpris {
-  background-color: rgba(125, 196, 228, 0.15);
+  background-color: rgba(145, 215, 227, 0.15);
   color: @sky;
   padding: 0px 6px;
   margin: 5px 5px;
   border-style: solid;
   border-radius: 7px;
-  border-color: rgba(125, 196, 228, 0.6);
+  border-color: rgba(145, 215, 227, 0.6);
   border-width: 2px;
+}
+
+#mpris:hover {
+  background-color: rgba(145, 215, 227, 0.75);
+  color: @crust
 }
 
 #wireplumber {
