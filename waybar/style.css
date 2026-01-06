@@ -80,8 +80,8 @@ button:hover {
 #custom-textBow {
   background-color: rgba(54, 58, 79, 0.15);
   color: @mauve;
-  padding: 0px 0px 0px 5px;
-  margin: 5px -4px 5px 0px;
+  padding: 0px 5px 0px 5px;
+  margin: 5px -7px 5px 0px;
   border-style: solid;
   border-radius: 7px 0px 0px 7px;
   border-color: rgba(54, 58, 79, 0.6);
@@ -91,7 +91,7 @@ button:hover {
 #workspaces {
   background-color: rgba(54, 58, 79, 0.15);
   color: @surface0;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 5px 0px 0px;
   margin: 5px 0px;
   border-style: solid;
   border-radius: 0px 7px 7px 0px;
@@ -168,7 +168,7 @@ button:hover {
     background-color: rgba(198, 160, 246, 0.15);
     color: @mauve;
     padding: 2px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     /* font-size: 17px; */
     border-style: solid;
     border-radius: 7px;
@@ -237,7 +237,7 @@ label:focus {
     background-color: rgba(125, 196, 228, 0.15);
     color: @sapphire;
     padding: 2px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(125, 196, 228, 0.6);
@@ -253,7 +253,7 @@ label:focus {
     background-color: rgba(166, 218, 149, 0.15);
     color: @green;
     padding: 2px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(166, 218, 149, 0.6);
@@ -269,7 +269,7 @@ label:focus {
     background-color: rgba(244, 219, 214, 0.15);
     color: @rosewater;
     padding: 2px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(244, 219, 214, 0.6);
@@ -285,7 +285,7 @@ label:focus {
     background-color: rgba(183, 189, 248, 0.15);
     color: @lavender;
     padding: 2px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(183, 189, 248, 0.6);
@@ -301,7 +301,7 @@ label:focus {
     background-color: rgba(245, 169, 127, 0.15);
     color: @peach;
     padding: 2px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(245, 169, 127, 0.6);
@@ -317,7 +317,7 @@ label:focus {
     background-color: rgba(237, 135, 150, 0.15);
     color: @red;
     padding: 2px 2px 2px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(237, 135, 150, 0.6);
@@ -341,7 +341,7 @@ label:focus {
     background-color: rgba(184, 192, 224, 0.15);
     color: @subtext1;
     padding: 0px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     font-size: 17px;
     border-style: solid;
     border-radius: 7px;
@@ -364,7 +364,7 @@ label:focus {
     color: @teal;
     /* color: @pink; */
     padding: 0px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(139, 213, 202, 0.6);
@@ -387,7 +387,7 @@ label:focus {
   background-color: rgba(145, 215, 227, 0.15);
   color: @sky;
   padding: 0px 6px;
-  margin: 5px 5px;
+  margin: 5px 0px;
   border-style: solid;
   border-radius: 7px;
   border-color: rgba(145, 215, 227, 0.6);
@@ -434,7 +434,7 @@ label:focus {
     background-color: rgba(138, 173, 244, 0.15);
     color: @blue;
     padding: 0px 6px;
-    margin: 5px 5px;
+    margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(138, 173, 244, 0.6);
