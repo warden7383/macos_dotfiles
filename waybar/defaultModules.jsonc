@@ -4,7 +4,6 @@
       "separate-ouputs": true
     },
     "custom/textBow": {
-      // "format": "<span size='16150'>󱡁 </span>"
       "format": "<span size='15360'>󱡁</span>"
     },
     "hyprland/workspaces": {
@@ -18,9 +17,7 @@
         "format-icons": {
             "urgent": "<span size='15360'></span>",
             "focused": " ",
-            // "default": "<span size='15360'> </span>", // 󰺕 
             "default": "<span size='14000'></span>", // 󰺕 
-            // "active": "<span size='16150'>󰣉 </span>"
             "active": "<span size='15360'>󰣉</span>"
         }
     },
@@ -91,7 +88,6 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        // "format": "<span size='13000'> </span>{:%I:%M %p}",
         "format": " {:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "<big>{:%I:%M %p}</big>\n<tt><small>{calendar}</small></tt>",
@@ -178,7 +174,6 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
-        // "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

@@ -32,13 +32,10 @@
 }
 
 window#waybar {
-    /* background-color: rgba(43, 48, 59, 0.5); */
-    background-color: @mantle;
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: rgba(30, 32, 48, 0.85);
     transition-property: background-color;
     transition-duration: .5s;
+    border-radius: 7px;
 }
 
 window#waybar.hidden {
@@ -81,7 +78,7 @@ button:hover {
   background-color: rgba(54, 58, 79, 0.15);
   color: @mauve;
   padding: 0px 5px 0px 5px;
-  margin: 5px -7px 5px 0px;
+  margin: 5px -7px 5px 5px;
   border-style: solid;
   border-radius: 7px 0px 0px 7px;
   border-color: rgba(54, 58, 79, 0.6);
@@ -163,16 +160,12 @@ button:hover {
 }
 
 #clock {
-    /* background-color: @surface0; */
-    /* background-color: rgba(54, 58, 79, 1.0); */
     background-color: rgba(198, 160, 246, 0.15);
     color: @mauve;
     padding: 2px 6px;
     margin: 5px 0px;
-    /* font-size: 17px; */
     border-style: solid;
     border-radius: 7px;
-    /* border-color: @mauve; */
     border-color: rgba(198, 160, 246, 0.6);
     border-width: 2px;
 }
@@ -317,7 +310,7 @@ label:focus {
     background-color: rgba(237, 135, 150, 0.15);
     color: @red;
     padding: 2px 2px 2px 6px;
-    margin: 5px 0px;
+    margin: 5px 5px 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(237, 135, 150, 0.6);
@@ -360,15 +353,12 @@ label:focus {
 
 #pulseaudio {
     background-color: rgba(139, 213, 202, 0.15);
-    /* background-color: rgba(245, 189, 230, 0.15); */
     color: @teal;
-    /* color: @pink; */
     padding: 0px 6px;
     margin: 5px 0px;
     border-style: solid;
     border-radius: 7px;
     border-color: rgba(139, 213, 202, 0.6);
-    /* border-color: rgba(245, 189, 230, 0.6); */
     border-width: 2px;
 }
 
@@ -378,7 +368,6 @@ label:focus {
 }
 
 #pulseaudio.muted {
-    /* background-color: #90b1b1; */
     background-color: rgba(139, 213, 202, 0.75);
     color: @crust;
 }

@@ -5,7 +5,9 @@
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 7, 
-    "reload_style_on_change": true,
+    "margin-top": 5,
+    "margin-left": 14,
+    "margin-right": 14,
     "output": ["HDMI-A-1"],
     "include": ["~/.config/waybar/defaultModules.jsonc"],
     "modules-left": [
@@ -38,7 +40,9 @@
 },{
     "height": 30, // Waybar height (to be removed for auto height)
     "spacing": 7, 
-    "reload_style_on_change": true,
+    "margin-top": 5,
+    "margin-left": 11,
+    "margin-right": 11,
     "output": ["DP-1"],
     "include": ["~/.config/waybar/defaultModules.jsonc"],
     "modules-left": [
