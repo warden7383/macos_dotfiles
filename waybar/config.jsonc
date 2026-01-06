@@ -19,7 +19,6 @@
         "hyprland/submap"
     ],
     "modules-center": [
-        // "hyprland/window"
         "clock"
     ],
     "modules-right": [
@@ -30,7 +29,7 @@
         // "power-profiles-daemon",
         // "temperature",
         "custom/weather",
-        "custom/date",
+        "clock#dateMainMod",
         // "backlight",
         // "hyprland/language",
         // "battery",
@@ -53,7 +52,6 @@
         "hyprland/submap"
     ],
     "modules-center": [
-        // "hyprland/window"
         "clock"
     ],
     "modules-right": [
@@ -64,7 +62,7 @@
         // "power-profiles-daemon",
         // "temperature",
         "custom/weather",
-        "custom/date",
+        "clock#dateMainMod",
         // "backlight",
         // "hyprland/language",
         // "battery",

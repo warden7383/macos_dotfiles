@@ -297,7 +297,7 @@ label:focus {
   color: @crust
 }
 
-#custom-date {
+#clock.dateMainMod {
     background-color: rgba(245, 169, 127, 0.15);
     color: @peach;
     padding: 2px 6px;
@@ -308,7 +308,7 @@ label:focus {
     border-width: 2px;
 }
 
-#custom-date:hover {
+#clock.dateMainMod:hover {
   background-color: rgba(245, 169, 127, 0.75);
   color: @crust
 }

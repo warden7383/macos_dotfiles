@@ -97,11 +97,11 @@
         "tooltip-format": "<big>{:%I:%M %p}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "󰃵 {:%Y-%m-%d}"
     },
-    "custom/date": {
-      "exec": "date +%m/%d/%Y",
-      "format": "󰃵 {}",
+    "clock#dateMainMod":{
+      "format": "󰃵 {:%m/%d/%Y}",
       "tooltip": true,
-      "interval": "once"
+      "tooltip-format": "<big>{:%I:%M %p}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": " {:%I:%M %p}"
     },
     "cpu": {
         "format": " {usage}%",
@@ -155,9 +155,6 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -170,13 +167,6 @@
       }
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        // "format-wifi": "{essid} ({signalStrength}%) ",
-        // "format-ethernet": "{ipaddr}/{cidr} ",
-        // "tooltip-format": "{ifname} via {gwaddr} ",
-        // "format-linked": "{ifname} (No IP) ",
-        // "format-disconnected": "Disconnected ⚠",
-        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
         "format-wifi": " ",
         "format-ethernet": "󰈁",
         "tooltip": true,
@@ -205,7 +195,6 @@
         },
         "on-click": "pavucontrol"
     },
-
     "mpris": {
       "format": "{status_icon} {dynamic} {status_icon}",
       "format-paused": "{status_icon} {dynamic} {status_icon}",
@@ -218,7 +207,6 @@
       "dynamic-separator": "  ",
       // "dynamic-order": ["artist", "title", "position", "length"],
       "dynamic-order": ["artist", "title"],
-      // "dynamic-len": 40,
       // "dynamic-importance-order": ["artist", "title", "position", "length"],
       "dynamic-importance-order": ["artist", "title"],
       "status-icons": {
@@ -226,19 +214,6 @@
         "paused": "<span size='14000'>󰎊</span>"
       },
   // "ignored-players": ["firefox"]
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            // these icons won't be displayed as "format": "{window}..." is disabled
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/customModules/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
       "format" : "⏻ ",
