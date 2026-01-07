@@ -108,6 +108,10 @@ else
       echo ">FILE: $key" >> output.txt
     done
 
+    echo "NOTE: if you are planning on pushing to github via ssh on another device, set up your ssh keys:" >> output.txt
+    echo "> https://github.com/settings/keys - place your ssh pub key there. do a ssh -T git@github.com"  >> output.txt
+    echo "> remember to do git remote add [name] [SSH github link] before pushing if using ssh"  >> output.txt
+
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
     echo -e "INFO: Install script detected [MACOS] OS. Installing Dotfiles:\n" >> output.txt
