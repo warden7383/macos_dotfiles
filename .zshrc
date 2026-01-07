@@ -53,7 +53,6 @@ export FZF_DEFAULT_OPTS="--height ~40%
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-
 #lsd (for ls colors and icons)
 alias ls='lsd'
 alias l='ls -l'
@@ -134,25 +133,13 @@ ZVM_VI_ESCAPE_BINDKEY=jk
 zvm_after_init_commands=(autopair-init) #loads autopair-init after loading zvm as zvm is lazy loaded
 source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-
-#If you need to have node@20 first in your PATH, run:
-  #echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
-
 #For compilers to find node@20 you may need to set:
   #export LDFLAGS="-L/opt/homebrew/opt/node@20/lib"
   #export CPPFLAGS="-I/opt/homebrew/opt/node@20/include"
 
-#for zsh tetris if bored
-#autoload -Uz tetriscurses
-#alias tetris=tetriscurses
-
 PATH="/opt/homebrew/opt/node@20/bin:$PATH"
-PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 PATH="/Users/warden/tools/llvm-project/build/bin:$PATH" #llvm and clang
-# PATH="$PATH:/Applications/nvim-macos/bin" #version 0.9
-# PATH="$PATH:/Users/warden/Downloads/nvimTest/nvim-macos-arm64/bin" #nightly that had statusline working
-# PATH="$PATH:/Applications/nvim-08-31-2024/nvim-macos-arm64/bin"
 PATH="$PATH:/Applications/nvim-macos-arm64-03-05-2025/bin"
 
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
@@ -183,7 +170,6 @@ export FZF_DEFAULT_OPTS="--height ~40%
 "
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
-
 
 #lsd (for ls colors and icons)
 alias ls='lsd'
