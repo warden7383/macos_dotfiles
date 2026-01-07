@@ -40,6 +40,7 @@ pkgsDnf="
   pavucontrol
   satty
   cliphist
+  udiskie
 "
 
 pkgsSnap="
