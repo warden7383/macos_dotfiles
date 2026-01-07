@@ -55,6 +55,8 @@ pkgsPip="PyGObject"
 
 pkgsBrew=("openjdk") # move to the top of the file
 
+pkgsNpm=("@google/gemini-cli@latest")
+
 fileApiKeys=("~/.config/waybar-weather/config.yaml")
 
 echo -e "[Dotfile Installer]:"
@@ -99,6 +101,9 @@ else
 
     echo "INFO: Installing cargo packages" >> output.txt
     cargo install $pkgsCargo 2>&1 | sudo tee -a output.txt
+
+    echo "INFO: Installing npm packages" >> output.txt
+    sudo npm install -g $pkgsNpm 2>&1 | sudo tee -a output.txt
 
     echo -e "\nDone installing packages." >> output.txt
 
