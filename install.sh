@@ -38,6 +38,8 @@ pkgsDnf="
   python3-pip
   nvtop
   pavucontrol
+  satty
+  cliphist
 "
 
 pkgsSnap="
