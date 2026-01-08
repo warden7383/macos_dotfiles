@@ -8,7 +8,7 @@ osName=$(uname -s)
 
 pkgsFlat="
   app.zen_browser.zen
-  om.discordapp.Discord
+  com.discordapp.Discord
 "
 pkgsDnf="
   ghostty 
@@ -119,6 +119,8 @@ else
     echo "NOTE: if you are planning on pushing to github via ssh on another device, set up your ssh keys:" >> output.txt
     echo "> https://github.com/settings/keys - place your ssh pub key there. do a ssh -T git@github.com"  >> output.txt
     echo "> remember to do git remote add [name] [SSH github link] before pushing if using ssh"  >> output.txt
+    echo -e "\nVesktop(Discord that fixes afk time): https://vesktop.dev/install/linux/ then run: sudo dnf install [package].rpm" >> output.txt
+    echo "> Move the vesktop.desktop to /usr/share/applications/ after (check if vesktop is in the Exec={...} location in the .desktop file) (edited according to vesktop docs)" >> output.txt
 
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
