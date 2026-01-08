@@ -110,6 +110,9 @@ PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 PATH="/home/warden/.cargo/bin:$PATH"
 
 export MANPAGER="bat -plman"
+export VISUAL=$(which nvim)
+export EDITOR=$VISUAL
+export SUDO_EDITOR=$VISUAL
 export PATH
 
 if [[ -z "$TMUX" ]]; then
