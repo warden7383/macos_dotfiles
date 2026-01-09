@@ -119,6 +119,11 @@ if [[ -z "$TMUX" ]]; then
 tmux
 fi
 
+# Only run if we are in an interactive SSH session and not already inside tmux
+if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
+    exec tmux new-session -A -s main
+fi
+
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -198,6 +203,11 @@ function cdy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# only run if we are in an interactive SSH session and not already inside tmux
+if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
+    exec tmux new-session -A -s main
+fi
 
 export PATH
 
