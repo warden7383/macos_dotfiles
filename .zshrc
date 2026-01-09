@@ -115,13 +115,16 @@ export EDITOR=$VISUAL
 export SUDO_EDITOR=$VISUAL
 export PATH
 
-if [[ -z "$TMUX" ]]; then
-tmux
-fi
+# if [[ -z "$TMUX" ]]; then
+# tmux
+# fi
 
 # Only run if we are in an interactive SSH session and not already inside tmux
 if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
-    exec tmux new-session -A -s main
+  exec tmux new-session -A -s main
+elif [[ -z "$TMUX" ]]; then
+  tmux
+else
 fi
 
 HISTFILE=~/.zsh_history
