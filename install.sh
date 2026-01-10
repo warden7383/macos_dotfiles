@@ -5,6 +5,7 @@ osName=$(uname -s)
 # pkgsDnf=("ghostty" "tmux" "starship" "bat" "zoxide" "fzf" "btop" "rg" "zsh" "fd" "lsd" "lazygit" "clang" "nodejs" "cmake" "make" "rust" "cargo" "golang")
 # NOTE: not sure how stable discord is from snap. (Install from official site if needed)
 # pkgsSnap=("spotify" "discord")
+# for docker reqs for linux: run: sudo usermod -aG kvm $USER and restart machine
 
 pkgsFlat="
   app.zen_browser.zen
@@ -41,6 +42,10 @@ pkgsDnf="
   satty
   cliphist
   udiskie
+  gimp
+  gnome-terminal
+  qt5ct
+  qt6ct
 "
 
 pkgsSnap="
@@ -54,7 +59,7 @@ pkgsCargo="waybar-weather gpu-usage-waybar"
 
 pkgsPip="PyGObject"
 
-pkgsBrew=("openjdk") # move to the top of the file
+pkgsBrew=("openjdk")
 
 pkgsNpm=("@google/gemini-cli@latest")
 
@@ -106,14 +111,18 @@ else
     echo "INFO: Installing npm packages" >> output.txt
     sudo npm install -g $pkgsNpm 2>&1 | sudo tee -a output.txt
 
+    echo "INFO: Installing pip packages" >> output.txt
+    pip install $pkgsPip 2>&1 | sudo tee -a output.txt
+
     echo -e "\nDone installing packages." >> output.txt
 
     echo "Adding execution perms to hyprland's gamemode script" >> output.txt
     chmod +x ~/.config/hypr/gamemode.sh 
 
     echo -e "TODO: Please manually add the api-keys necessary to the following scripts\n" >> output.txt
+
     for key in "${fileApiKeys[@]}"; do
-      echo ">FILE: $key" >> output.txt
+      echo "> FILE: $key" >> output.txt
     done
 
     echo "NOTE: if you are planning on pushing to github via ssh on another device, set up your ssh keys:" >> output.txt
@@ -121,6 +130,8 @@ else
     echo "> remember to do git remote add [name] [SSH github link] before pushing if using ssh"  >> output.txt
     echo -e "\nVesktop(Discord that fixes afk time): https://vesktop.dev/install/linux/ then run: sudo dnf install [package].rpm" >> output.txt
     echo "> Move the vesktop.desktop to /usr/share/applications/ after (check if vesktop is in the Exec={...} location in the .desktop file) (edited according to vesktop docs)" >> output.txt
+    echo "NOTE: Gemini cli needs authentication" >> output.txt
+    echo "NOTE: for docker setup, follow the docs: https://docs.docker.com/desktop/setup/install/linux/fedora/" >> output.txt
 
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
