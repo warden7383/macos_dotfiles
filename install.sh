@@ -132,6 +132,14 @@ else
     echo "> Move the vesktop.desktop to /usr/share/applications/ after (check if vesktop is in the Exec={...} location in the .desktop file) (edited according to vesktop docs)" >> output.txt
     echo "NOTE: Gemini cli needs authentication" >> output.txt
     echo "NOTE: for docker setup, follow the docs: https://docs.docker.com/desktop/setup/install/linux/fedora/" >> output.txt
+    echo "Setting up qt5 and qt6 themes..." >> output.txt
+    git clone https://github.com/catppuccin/qt5ct "$HOME/qt5"
+    mkdir -p ~/.config/qt5ct/colors/; cp -r "$HOME/qt5/themes/." ~/.config/qt5ct/colors/ 2>&1 || sudo tee -a output.txt
+    mkdir -p ~/.config/qt6ct/colors/; cp -r "$HOME/qt5/themes/." ~/.config/qt6ct/colors/ 2>&1 || sudo tee -a output.txt
+
+    echo "NOTE: go to https://github.com/catppuccin/kde?tab=readme-ov-file to theme KDE apps with catppuccin" >> output.txt
+    echo "NOTE: go to https://gitlab.com/Pummelfisch/future-cyan-hyprcursor and git clone the repo to get hyprland cursor (or search for another hyprland cursor theme)" >> output.txt
+
 
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
