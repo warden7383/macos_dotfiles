@@ -138,9 +138,16 @@ else
     mkdir -p ~/.config/qt5ct/colors/; cp -r "$HOME/qt5/themes/." ~/.config/qt5ct/colors/ 2>&1 || sudo tee -a output.txt
     mkdir -p ~/.config/qt6ct/colors/; cp -r "$HOME/qt5/themes/." ~/.config/qt6ct/colors/ 2>&1 || sudo tee -a output.txt
 
+    echo "Setting up rofi themes..." >> output.txt
+    git clone --depth=1 https://github.com/warden7383/rofi.git "$HOME" 2>&1 || sudo tee -a output.txt
+    cd ~/rofi 2>&1 || sudo tee -a output.txt
+    chmod +x setup.sh 2>&1 || sudo tee -a output.txt
+    bash setup.sh 2>&1 || sudo tee -a output.txt
+
     echo "NOTE: go to https://github.com/catppuccin/kde?tab=readme-ov-file to theme KDE apps with catppuccin" >> output.txt
     echo "NOTE: go to https://gitlab.com/Pummelfisch/future-cyan-hyprcursor and git clone the repo to get hyprland cursor (or search for another hyprland cursor theme)" >> output.txt
     echo "NOTE: use nwg-look to configure the GTK cursor." >> output.txt
+    echo "NOTE: see https://github.com/warden7383/rofi.git docs to how to edit/style rofi"
 
 
   elif [[ "$osName" == "Darwin" ]]; then
