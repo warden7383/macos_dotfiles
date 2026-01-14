@@ -49,6 +49,7 @@ pkgsDnf="
   nwg-look
   mpv
   haruna
+  mosh
 "
 
 pkgsSnap="
