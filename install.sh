@@ -47,6 +47,8 @@ pkgsDnf="
   qt5ct
   qt6ct
   nwg-look
+  mpv
+  haruna
 "
 
 pkgsSnap="
