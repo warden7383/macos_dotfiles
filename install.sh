@@ -64,9 +64,9 @@ pkgsCargo="waybar-weather gpu-usage-waybar"
 
 pkgsPip="PyGObject"
 
-pkgsBrew=("openjdk")
+pkgsBrew="openjdk" "anomalyco/tap/opencode" 
 
-pkgsNpm=("@google/gemini-cli@latest")
+pkgsNpm="@google/gemini-cli@latest" "opencode-ai@latest" 
 
 fileApiKeys=("~/.config/waybar-weather/config.yaml")
 
