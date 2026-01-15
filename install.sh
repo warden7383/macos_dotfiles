@@ -50,6 +50,7 @@ pkgsDnf="
   mpv
   haruna
   mosh
+  papirus-icon-theme
 "
 
 pkgsSnap="
