@@ -51,6 +51,8 @@ pkgsDnf="
   haruna
   mosh
   papirus-icon-theme
+  valgrind
+  cgdb
 "
 
 pkgsSnap="
