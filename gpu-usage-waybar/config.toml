@@ -2,7 +2,7 @@
 ## DOCS: https://github.com/PolpOnline/gpu-usage-waybar
 [general]
 Interval to update the GPU usage in milliseconds
-interval = 10000
+interval = 4000
 
 # TEXT CONFIGURATION
 [text]

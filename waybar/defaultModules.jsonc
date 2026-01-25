@@ -101,9 +101,9 @@
     },
     "cpu": {
         "format": " {usage}%",
+        "interval": 2,
         "tooltip": true,
         "tooltip-format": "{avg_frequency}"
-
     },
     // https://crates.io/crates/waybar-weather
     "custom/weather": {
@@ -114,6 +114,7 @@
     "memory": {
         "format": " {}%",
         "tooltip": true,
+        "interval": 10,
         "tooltip-format": "{used:0.1f}GiB/{total:0.1f}GiB used"
     },
     "custom/gpu-usage": {
