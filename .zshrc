@@ -149,6 +149,7 @@ source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
   #export CPPFLAGS="-I/opt/homebrew/opt/node@20/include"
 
 PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 PATH="/Users/warden/tools/llvm-project/build/bin:$PATH" #llvm and clang
 PATH="$PATH:/Applications/nvim-macos-arm64-03-05-2025/bin"
