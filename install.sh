@@ -53,6 +53,7 @@ pkgsDnf="
   papirus-icon-theme
   valgrind
   cgdb
+  hyprprop
 "
 
 pkgsSnap="
