@@ -59,6 +59,11 @@ pkgsDnf="
 pkgsSnap="
   spotify 
   discord 
+  code
+"
+
+pkgsSnapClassic="
+  code
 "
 
 pkgsCopr=("atim/starship" "scottames/ghostty" "solopasha/hyprland" "dejan/lazygit" "phracek/PyCharm")
@@ -104,6 +109,11 @@ else
     echo "INFO: Installing flatpak" >> output.txt
     sudo dnf install flatpak -y 2>&1 | sudo tee -a output.txt
 
+    echo "INFO: Installing snapd" >> output.txt
+    sudo dnf install snapd -y 2>&1 | sudo tee -a output.txt
+    echo "INFO: Enabling classic snap support..." >> output.txt
+    sudo ln -s /var/lib/snapd/snap /snap 2>&1 | sudo tee -a ouput.txt
+
     echo "INFO: Installing dnf packages" >> output.txt
     sudo dnf install $pkgsDnf -y 2>&1 | sudo tee -a output.txt
 
@@ -111,7 +121,12 @@ else
     sudo flatpak install $pkgsFlat -Y 2>&1 | sudo tee -a output.txt
 
     echo "INFO: Installing snap packages" >> output.txt
-    sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt
+    # sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt # -y option may not work(?)
+    sudo snap install $pkgsSnap 2>&1 | sudo tee -a output.txt
+
+
+    echo "INFO: Installing snap classic packages" >> output.txt
+    sudo snap install --classic $pkgsSnapClassic 2>&1 | sudo tee -a output.txt
 
     echo "INFO: Installing cargo packages" >> output.txt
     cargo install $pkgsCargo 2>&1 | sudo tee -a output.txt
