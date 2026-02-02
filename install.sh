@@ -54,6 +54,7 @@ pkgsDnf="
   valgrind
   cgdb
   hyprprop
+  java-latest-openjdk-devel
 "
 
 pkgsSnap="
@@ -99,6 +100,11 @@ else
     echo "INFO: Updating existing packages:" >> output.txt
     sudo dnf upgrade -y 2>&1 | sudo tee -a output.txt
     echo -e "INFO: Install script detected [LINUX] OS. Installing Dotfiles:\n" >> output.txt
+    echo -e "INFO: Enabling free and nonfree repo...\n" >> output.txt
+    sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm  -y 2>&1 | sudo tee -a output.txt
+
+    echo -e "INFO: set default config\n" >> output.txt
+    sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1 2>&1 | sudo tee -a output.txt
 
     echo -e "INFO: Enabling COPR Repos\n" >> output.txt
     for repo in "${pkgsCopr[@]}"; do
