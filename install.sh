@@ -10,6 +10,7 @@ osName=$(uname -s)
 pkgsFlat="
   app.zen_browser.zen
   com.discordapp.Discord
+  org.kde.haruna
 "
 pkgsDnf="
   ghostty 
@@ -48,7 +49,6 @@ pkgsDnf="
   qt6ct
   nwg-look
   mpv
-  haruna
   mosh
   papirus-icon-theme
   valgrind
@@ -62,6 +62,9 @@ pkgsDnf="
   libva-utils
   vulkan-loader-devel
   mesa-vulkan-drivers.i686
+  drm-utils
+  drm_info
+  hyprgraphics-devel
 "
 
 pkgsSnap="
@@ -184,7 +187,7 @@ else
     echo "NOTE: go to https://gitlab.com/Pummelfisch/future-cyan-hyprcursor and git clone the repo to get hyprland cursor (or search for another hyprland cursor theme)" >> output.txt
     echo "NOTE: use nwg-look to configure the GTK cursor." >> output.txt
     echo "NOTE: see https://github.com/warden7383/rofi.git docs to how to edit/style rofi"
-
+    echo "NOTE: see hyprland nvidia docs if using nvidia gpu for setup. as well as doing the secure boot key import into BIOS/EFI from fedora official docs" >> output.txt
 
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
