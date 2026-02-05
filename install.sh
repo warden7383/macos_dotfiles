@@ -65,6 +65,8 @@ pkgsDnf="
   drm-utils
   drm_info
   hyprgraphics-devel
+  hyprsunset
+  pipx
 "
 
 pkgsSnap="
@@ -88,6 +90,8 @@ pkgsBrew="openjdk" "anomalyco/tap/opencode"
 pkgsNpm="@google/gemini-cli@latest" "opencode-ai@latest" 
 
 fileApiKeys=("~/.config/waybar-weather/config.yaml")
+
+pkgsPipx="hyprshade"
 
 echo -e "[Dotfile Installer]:"
 echo -e "[OS] $osName detected"
@@ -134,6 +138,9 @@ else
     echo "INFO: Installing dnf packages" >> output.txt
     sudo dnf install $pkgsDnf -y 2>&1 | sudo tee -a output.txt
 
+    echo "INFO: reloading ~/.zshrc path" >> output.txt
+    source ~/.zshrc 2>&1 | sudo tee -a output.txt
+
     echo "INFO: Installing flat packages" >> output.txt
     sudo flatpak install $pkgsFlat -Y 2>&1 | sudo tee -a output.txt
 
@@ -153,6 +160,9 @@ else
 
     echo "INFO: Installing pip packages" >> output.txt
     pip install $pkgsPip 2>&1 | sudo tee -a output.txt
+
+    echo "INFO: Installing pipx packages" >> output.txt
+    pipx install $pkgsPipx 2>&1 | sudo tee -a output.txt
 
     echo -e "\nDone installing packages." >> output.txt
 
@@ -188,6 +198,7 @@ else
     echo "NOTE: use nwg-look to configure the GTK cursor." >> output.txt
     echo "NOTE: see https://github.com/warden7383/rofi.git docs to how to edit/style rofi"
     echo "NOTE: see hyprland nvidia docs if using nvidia gpu for setup. as well as doing the secure boot key import into BIOS/EFI from fedora official docs" >> output.txt
+    echo "NOTE: enable haruna nvdec decoder (for nvidia gpu) from launching haruna -> settings -> playback -> hardware decoding" >> output.txt
 
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
