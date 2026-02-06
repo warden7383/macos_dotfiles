@@ -109,15 +109,11 @@ batdiff() {
 PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 PATH="/home/warden/.cargo/bin:$PATH"
 
-export MANPAGER="bat -plman"
+export MANPAGER="zsh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -plman'"
 export VISUAL=$(which nvim)
 export EDITOR=$VISUAL
 export SUDO_EDITOR=$VISUAL
 export PATH
-
-# if [[ -z "$TMUX" ]]; then
-# tmux
-# fi
 
 # Only run if we are in an interactive SSH session and not already inside tmux
 if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
@@ -149,7 +145,6 @@ source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
   #export CPPFLAGS="-I/opt/homebrew/opt/node@20/include"
 
 PATH="/opt/homebrew/opt/node@20/bin:$PATH"
-PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 PATH="/Users/warden/tools/llvm-project/build/bin:$PATH" #llvm and clang
 PATH="$PATH:/Applications/nvim-macos-arm64-03-05-2025/bin"
@@ -218,3 +213,6 @@ export PATH
 else
 echo "Running on unknown OS\n"
 fi
+
+# Created by `pipx` on 2026-02-05 08:06:00
+export PATH="$PATH:/home/warden/.local/bin"
