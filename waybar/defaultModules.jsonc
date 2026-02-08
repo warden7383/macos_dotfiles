@@ -217,8 +217,12 @@
       "menu": "on-click",
       "menu-file": "$HOME/.config/waybar/customModules/power_menu.xml", // Menu file in resources folder
       "menu-actions": {
-        "shutdown": "shutdown",
-        "reboot": "reboot",
+        "shutdown (boot to default boot)": "shutdown",
+        "shutdown (to W11)": "sudo efibootmgr -n 0003 && shutdown",
+        "shutdown (to linux6.18.7)": "sudo efibootmgr -n 0002 && shutdown",
+        "reboot (boot to default boot)": "reboot",
+        "reboot (to W11)": "sudo efibootmgr -n 0003 && reboot",
+        "reboot (to linux6.18.7)": "sudo efibootmgr -n 0002 && reboot",
         "suspend": "systemctl suspend",
         "hibernate": "systemctl hibernate"
       }

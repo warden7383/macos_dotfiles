@@ -12,17 +12,44 @@
         </object>
 	</child>
     <child>
-        <object class="GtkMenuItem" id="shutdown">
+        <object class="GtkMenuItem" id="shutdown (boot to default boot)">
 			<property name="label">Shutdown</property>
         </object>
     </child>
+
+    <child>
+        <object class="GtkMenuItem" id="shutdown (to linux6.18.7)">
+			<property name="label">Shutdown (Boot to Linux(6.18.7) Next)</property>
+        </object>
+    </child>
+
+    <child>
+        <object class="GtkMenuItem" id="shutdown (to W11)">
+			<property name="label">Shutdown (Boot to Windows Next)</property>
+        </object>
+    </child>
+
     <child>
       <object class="GtkSeparatorMenuItem" id="delimiter1"/>
     </child>
     <child>
-		<object class="GtkMenuItem" id="reboot">
+		<object class="GtkMenuItem" id="reboot (boot to default boot)">
 			<property name="label">Reboot</property>
 		</object>
     </child>
+
+		  <child>
+		<object class="GtkMenuItem" id="reboot (to linux6.18.7)">
+			<property name="label">Reboot (To Linux16.18.7)</property>
+		</object>
+		  </child>
+
+		  <child>
+		<object class="GtkMenuItem" id="reboot (to W11)">
+			<property name="label">Reboot (To Windows)</property>
+		</object>
+		  </child>
+
+
   </object>
 </interface>
