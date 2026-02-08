@@ -195,7 +195,7 @@ else
     bash setup.sh 2>&1 || sudo tee -a output.txt
 
     echo "Enable passwordless boot from waybar power module..." >> output.txt
-    echo "warden ALL=(ALL) NOPASSWD:/usr/sbin/grub2-reboot, /usr/sbin/reboot" | sudo tee /etc/sudooers.d/warden-reboot | sudo tee -a output.txt
+    echo "warden ALL=(ALL) NOPASSWD:/usr/sbin/grub2-reboot, /usr/sbin/reboot, /usr/sbin/efibootmgr, /usr/sbin/shutdown" | sudo tee /etc/sudoers.d/warden-reboot 2>&1 | sudo tee -a output.txt
 
     echo "NOTE: go to https://github.com/catppuccin/kde?tab=readme-ov-file to theme KDE apps with catppuccin" >> output.txt
     echo "NOTE: go to https://gitlab.com/Pummelfisch/future-cyan-hyprcursor and git clone the repo to get hyprland cursor (or search for another hyprland cursor theme)" >> output.txt
