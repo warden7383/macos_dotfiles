@@ -60,6 +60,8 @@ font-synthetic-style = false
 font-size = 13
 font-thicken = true
 
+clipboard-read = allow
+clipboard-write = allow
 # adjust-cell-width = 0%
 # adjust-cell-height = 0%
 adjust-underline-position = 5%
