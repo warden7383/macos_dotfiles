@@ -23,6 +23,11 @@ cmd + alt - c : yabai -m space --focus next
 
 alt - 1 : yabai -m space --focus 1 
 # alt - 1 : echo "testing"
+
+# Repeat this for 2, 3, 4, etc.
+# alt - 2 : yabai -m query --spaces --space 2 || yabai -m space --create; yabai -m space --focus 2
+# alt - 3 : yabai -m query --spaces --space 3 || yabai -m space --create; yabai -m space --focus 3
+# alt - 4 : yabai -m query --spaces --space 4 || yabai -m space --create; yabai -m space --focus 4
 alt - 2 : yabai -m space --focus 2
 alt - 3 : yabai -m space --focus 3
 alt - 4 : yabai -m space --focus 4 || yabai -m space --create ; yabai -m space --focus 4 
@@ -37,9 +42,7 @@ alt - 0 : yabai -m space --focus 10
 # move managed window
 #shift + cmd - h : yabai -m window --warp east
 
-# balance size of windows 
-alt + shift - 0x18 : yabai -m space --balance
-
+# balance size of windows alt + shift - 0x18 : yabai -m space --balance
 # make floating window fill screen
 # shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
 
@@ -63,6 +66,10 @@ shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
 # send window to desktop and follow focus
 # shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
 #shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+
+# alt + shift - 2 : yabai -m query --spaces --space 2 || yabai -m space --create; yabai -m window --space 2 --focus 2
+# alt + shift - 3 : yabai -m query --spaces --space 3 || yabai -m space --create; yabai -m window --space 3 --focus 3
+# alt + shift - 4 : yabai -m query --spaces --space 4 || yabai -m space --create; yabai -m window --space 4 --focus 4
 alt + shift - 1 : yabai -m window --space 1 --focus
 alt + shift - 2 : yabai -m window --space 2 --focus
 alt + shift - 3 : yabai -m window --space 3 --focus
@@ -117,4 +124,16 @@ alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
 #alt - p : yabai -m window --toggle sticky --toggle pip
 
 # NOTE: TEMP to destroy annoying spaces
-ctrl + shift - q : yabai -m space --destroy
+# ctrl + shift - q : yabai -m space --destroy
+#
+# :: special @
+# alt - e ; special
+# # special < 1 : yabai -m space --focus 5; skhd -k "escape"
+# # Modified '1' bind inside your special mode
+# special < 1 : yabai -m query --spaces --space discord || yabai -m space --create; \
+#           yabai -m space 10 --label discord; \
+#           yabai -m space --focus discord; \
+#           skhd -k "escape"
+# special < escape ; default
+#
+

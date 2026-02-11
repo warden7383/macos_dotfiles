@@ -104,3 +104,9 @@ yabai -m config debug_output on
 yabai -m rule --add app="^VirtualBox VM$" manage=off
 # yabai -m rule --add --one-shot app="^Discord$" space=2
 yabai -m rule --add app="^Discord$" space=2
+
+# On startup, destroy all empty spaces except the first one
+yabai -m query --spaces | jq '.[] | select(.windows == [] and .index != 1) | .index' | tail -r | xargs -I{} yabai -m space {} --destroy
+
+# yabai -m signal --add event=space_changed action='yabai -m query --spaces | jq ".[] | select(.windows == [] and .index != 1 and .\"has-focus\" == false) | .index" | xargs -I{} yabai -m space {} --destroy'
+
