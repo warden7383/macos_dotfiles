@@ -11,6 +11,7 @@ pkgsFlat="
   app.zen_browser.zen
   com.discordapp.Discord
   org.kde.haruna
+  com.stremio.Stremio
 "
 pkgsDnf="
   ghostty 
@@ -143,7 +144,7 @@ else
     source ~/.zshrc 2>&1 | sudo tee -a output.txt
 
     echo "INFO: Installing flat packages" >> output.txt
-    sudo flatpak install $pkgsFlat -Y 2>&1 | sudo tee -a output.txt
+    sudo flatpak install $pkgsFlat -y 2>&1 | sudo tee -a output.txt
 
     echo "INFO: Installing snap packages" >> output.txt
     # sudo snap install $pkgsSnap -y 2>&1 | sudo tee -a output.txt # -y option may not work(?)
