@@ -69,11 +69,11 @@ pkgsDnf="
   hyprsunset
   pipx
   waypipe
-  barrier
+  deskflow
 "
-# NOTE: deskflow - use deskflow instead of barrier because barrier is unmaintained  when
+# NOTE: deskflow - use deskflow when issue is fixed because barrier is unmaintained and does not work with hyprland (input-flow as well)
 # https://github.com/hyprwm/xdg-desktop-portal-hyprland/issues/259 is closed
-# NOTE: barrier is called input-leap since its a fork of the unmaintained barrier repo
+
 
 pkgsSnap="
   spotify 
