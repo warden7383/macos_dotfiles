@@ -16,8 +16,11 @@ after-startup-command = ['exec-and-forget sketchybar', 'exec-and-forget ~/jankyB
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+    '/opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
 
 # Start AeroSpace at login
 start-at-login = false
@@ -168,8 +171,8 @@ on-mode-changed = []
     # alt-v = 'workspace V'
     # alt-w = 'workspace W'
     # alt-x = 'workspace X'
-    # alt-y = 'workspace Y'
-    # alt-z = 'workspace Z'
+    # alt-y = 'workspace Y --auto-back-and-forth'
+    # alt-z = 'workspace Z --auto-back-and-forth'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1 --auto-back-and-forth']
@@ -202,8 +205,8 @@ on-mode-changed = []
     # alt-shift-v = 'move-node-to-workspace V'
     # alt-shift-w = 'move-node-to-workspace W'
     # alt-shift-x = 'move-node-to-workspace X'
-    # alt-shift-y = 'move-node-to-workspace Y'
-    # alt-shift-z = 'move-node-to-workspace Z'
+    # alt-shift-y = ['move-node-to-workspace Y', 'workspace Y --auto-back-and-forth']
+    # alt-shift-z = ['move-node-to-workspace Z', 'workspace Z --auto-back-and-forth']
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -213,7 +216,7 @@ on-mode-changed = []
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
-    # alt-e = "mode miscWorkspaces"
+    alt-e = "mode miscWorkspaces"
 
     alt-x = "fullscreen"
     alt-shift-x = "macos-native-fullscreen"
@@ -237,5 +240,16 @@ on-mode-changed = []
     alt-shift-l = ['join-with right', 'mode main']
 
 [mode.miscWorkspaces.binding]
-    # 1 = ['workspace A']
-    # 2 = ['workspace B']
+    1 = ['workspace Y --auto-back-and-forth', 'mode main']
+    2 = ['workspace Z --auto-back-and-forth', 'mode main']
+    shift-1 = ['move-node-to-workspace Y', 'mode main']
+    shift-2 = ['move-node-to-workspace Z', 'mode main']
+    esc = 'mode main'
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = ['layout tiling', 'move-node-to-workspace Y']
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = ['layout tiling', 'move-node-to-workspace Z']
