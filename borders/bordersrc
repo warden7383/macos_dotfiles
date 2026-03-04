@@ -1,5 +1,5 @@
 borders \
 active_color=0xffb7bdf8 \
 style=round \
-width=5.0 \
-
+width=3.5 \
+order=above \
