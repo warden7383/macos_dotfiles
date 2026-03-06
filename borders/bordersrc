@@ -1,5 +1,6 @@
 borders \
 active_color=0xffb7bdf8 \
-style=round \
-width=3.5 \
-order=above \
+inactive_color=0xff494d64 \
+width=3.0 \
+style=outline \
+background_color=0x00000000 \

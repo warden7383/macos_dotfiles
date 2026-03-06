@@ -47,7 +47,9 @@ yabai -m config                                 \
     mouse_action2                resize         \
     mouse_drop_action            swap
 
-borders active_color=0xffb7bdf8 style=round width=5.0 &
+# NOTE: jankyborders config in .config/borders/bordersrc
+# borders active_color=0xffb7bdf8 style=round width=5.0 & 
+borders
 #ffb7bdf8
 #view the last lines of error log:
 #   tail -f /tmp/yabai_$USER.err.log
