@@ -12,18 +12,17 @@ config-version = 2
 # Run Sketchybar together with AeroSpace
 # sketchybar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
-after-startup-command = ['exec-and-forget sketchybar', 'exec-and-forget ~/jankyBorders.sh']
+# after-startup-command = ['exec-and-forget sketchybar', 'exec-and-forget ~/jankyBorders.sh']
+# after-startup-command = ['exec-and-forget sketchybar', 'exec-and-forget borders']
+after-startup-command = ['exec-and-forget sketchybar']
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = ['/bin/bash', '-c',
     '/opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
-# exec-on-workspace-change = ['/bin/bash', '-c',
-#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
-# ]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -223,6 +222,7 @@ on-mode-changed = []
     alt-shift-q = "close"
 
     alt-space = "layout tiling floating"
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -253,3 +253,15 @@ run = ['layout tiling', 'move-node-to-workspace Y']
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = ['layout tiling', 'move-node-to-workspace Z']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'finder'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'System Settings'
+run = ['layout tiling']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'layout tiling'
