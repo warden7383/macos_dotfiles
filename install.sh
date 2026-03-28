@@ -71,6 +71,7 @@ pkgsDnf="
   waypipe
   deskflow
   libtsan
+  wine
 "
 # NOTE: deskflow - use deskflow when issue is fixed because barrier is unmaintained and does not work with hyprland (input-flow as well)
 # https://github.com/hyprwm/xdg-desktop-portal-hyprland/issues/259 is closed
