@@ -87,7 +87,7 @@ pkgsSnapClassic="
   code
 "
 
-pkgsCopr=("atim/starship" "scottames/ghostty" "solopasha/hyprland" "dejan/lazygit" "phracek/PyCharm")
+pkgsCopr=("atim/starship" "scottames/ghostty" "lionheartp/Hyprland" "dejan/lazygit" "phracek/PyCharm")
 
 pkgsCargo="waybar-weather gpu-usage-waybar"
 
