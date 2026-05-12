@@ -72,7 +72,10 @@ pkgsDnf="
   deskflow
   libtsan
   wine
+  gmp-devel
+  ncurses-compat-libs
 "
+
 # NOTE: deskflow - use deskflow when issue is fixed because barrier is unmaintained and does not work with hyprland (input-flow as well)
 # https://github.com/hyprwm/xdg-desktop-portal-hyprland/issues/259 is closed
 
@@ -210,6 +213,7 @@ else
     echo "NOTE: see https://github.com/warden7383/rofi.git docs to how to edit/style rofi"
     echo "NOTE: see hyprland nvidia docs if using nvidia gpu for setup. as well as doing the secure boot key import into BIOS/EFI from fedora official docs" >> output.txt
     echo "NOTE: enable haruna nvdec decoder (for nvidia gpu) from launching haruna -> settings -> playback -> hardware decoding" >> output.txt
+    echo "NOTE: to install haskell: goto: curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh (from haskel ghcup docs)" >> output.txt
 
   elif [[ "$osName" == "Darwin" ]]; then
     touch output.txt
