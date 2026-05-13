@@ -108,6 +108,8 @@ batdiff() {
 
 PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 PATH="/home/warden/.cargo/bin:$PATH"
+PATH="/home/warden/.ghcup/bin:$PATH"
+PATH="/home/warden/.cabal/bin:$PATH"
 
 export MANPAGER="zsh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -plman'"
 export VISUAL=$(which nvim)
@@ -216,3 +218,5 @@ fi
 
 # Created by `pipx` on 2026-02-05 08:06:00
 export PATH="$PATH:/home/warden/.local/bin"
+
+# [ -f "/home/warden/.ghcup/env" ] && . "/home/warden/.ghcup/env" # ghcup-env
