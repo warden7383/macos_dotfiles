@@ -74,6 +74,7 @@ pkgsDnf="
   wine
   gmp-devel
   ncurses-compat-libs
+  waydroid
 "
 
 # NOTE: deskflow - use deskflow when issue is fixed because barrier is unmaintained and does not work with hyprland (input-flow as well)
