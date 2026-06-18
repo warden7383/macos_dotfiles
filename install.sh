@@ -79,6 +79,7 @@ pkgsDnf="
   android-tools
   qemu-kvm
   libvirt
+  racket
 "
 
 # NOTE: deskflow - use deskflow when issue is fixed because barrier is unmaintained and does not work with hyprland (input-flow as well)
