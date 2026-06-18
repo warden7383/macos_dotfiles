@@ -12,6 +12,7 @@ pkgsFlat="
   com.discordapp.Discord
   org.kde.haruna
   com.stremio.Stremio
+  com.google.AndroidStudio
 "
 pkgsDnf="
   ghostty 
@@ -74,7 +75,10 @@ pkgsDnf="
   wine
   gmp-devel
   ncurses-compat-libs
-  waydroid
+  lzip
+  android-tools
+  qemu-kvm
+  libvirt
 "
 
 # NOTE: deskflow - use deskflow when issue is fixed because barrier is unmaintained and does not work with hyprland (input-flow as well)
