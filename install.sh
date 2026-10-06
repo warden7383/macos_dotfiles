@@ -13,6 +13,7 @@ pkgsFlat="
   org.kde.haruna
   com.stremio.Stremio
   com.google.AndroidStudio
+  com.protonvpn.www
 "
 pkgsDnf="
   ghostty 
@@ -86,10 +87,12 @@ pkgsDnf="
 # https://github.com/hyprwm/xdg-desktop-portal-hyprland/issues/259 is closed
 
 
+# NOTE: ngrok will require additional setup for auth-tokens
 pkgsSnap="
   spotify 
   discord 
   code
+  ngrok 
 "
 
 pkgsSnapClassic="
@@ -104,7 +107,7 @@ pkgsPip="PyGObject"
 
 pkgsBrew="openjdk" "anomalyco/tap/opencode" 
 
-pkgsNpm="@google/gemini-cli@latest" "opencode-ai@latest" 
+pkgsNpm="@google/gemini-cli@latest" "opencode-ai@latest" "oxfmt"
 
 fileApiKeys=("~/.config/waybar-weather/config.yaml")
 
